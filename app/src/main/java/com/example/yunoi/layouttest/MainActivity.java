@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private FragmentTransaction ft;
     private SettingFragment settingFragment;
     private Fragment mainFragment;
+    private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         settingFragment = new SettingFragment();
         mainFragment = new MainFragment();
 
+        Log.d(TAG, "test입니다.");
+        
         // bottomMenu를 변경했을 때 그것을 감지하여 해당된 프래그먼트를 세팅해주는 리스너
         bottomMenu.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
